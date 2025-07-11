@@ -1,0 +1,11 @@
+import numpy as np
+import joblib
+from sklearn.linear_model import LogisticRegression
+
+X = np.array([[10, 30], [20, 50], [50, 70], [80, 10]])
+y = np.array([0, 0, 1, 1])
+
+modelo = LogisticRegression()
+modelo.fit(X, y)
+
+joblib.dump(modelo, 'models/model.pkl')
